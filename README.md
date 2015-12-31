@@ -1,36 +1,31 @@
-angular-swipe
-=============
+#angular-swipe
 
-Simple vertical/horizontal swipe gesture directives and a swipe service for angular js >= 1.4. Small extension of the existing angular $swipe service.
+Simple vertical/horizontal swipe gesture directives and a swipe service for angular js >= 1.4 that should be used as a replacement for ngTouch and its ngSwipeLeft and ngSwipeRight directives. The problem with ngTouch is that it replaces all default ngClick directives and can screw up how focus event works in input fields which are wrapped with ngClick directive. More on the problem with ngTouch here: https://github.com/angular/angular.js/issues/6432#issuecomment-54636616. 
 
 ## Install
 
-+ Add this line to your *bower.json* dependencies and run *bower install* afterwards.
++ This is intended to be used as npm module only now. This works really well with browserify.
 
 >
-``` JavaScript
-"angular-swipe": "~0.1.0"
+``` 
+npm install angular-swipe --save-dev
 ```
 
-+ Include the required source file (this path or similar)
++ Require the angular-swipe module
 
 >
-``` html
-<script src="bower_components/dist/angular-swipe.js"></script>
+``` javascript
+import swipe from 'angular-swipe'
 ```
 
-+ Inject the `swipe` module into your app.
++ Add dependency to the angular-swipe ng module
 
 >
-``` JavaScript
-angular.module('app', ['swipe']);
+``` javascript
+angular.module('app', [ swipe.name ]);
 ```
 
 ## Usage
-
-#### Module Name (Dependency)
-
-* swipe
 
 #### Directives
 
@@ -39,7 +34,7 @@ angular.module('app', ['swipe']);
 * ng-swipe-left
 * ng-swipe-right
 
-#### Directive Attributes
+#### Directive attributes
 
 `ng-swipe-disable-mouse` "This attribute is useful for text that should still be selectable by the mouse and not trigger the swipe action."
 
@@ -51,7 +46,7 @@ angular.module('app', ['swipe']);
 
 >
 ```html
-<div class="page" ng-controller="AppCtrl">
+<div class="page" ng-controller="AppController">
     <div class="container" ng-swipe-up="swipe($event)">
       <h1>Swipe me up!</h1>
     </div>
@@ -59,13 +54,13 @@ angular.module('app', ['swipe']);
 ```
 
 >
-```JavaScript
-var app = angular.module('app', [ 'swipe' ]);
-app.controller('AppCtrl', function AppCtrl($scope) {
-  $scope.swipe = function($event) {
-    console.log($event);
-  };
-})
+```javascript
+import { module, bootstrap } from 'angular';
+import swipe from 'angular-swipe';
+module('app', [ swipe.name ])
+    .controller('AppController', $scope => {
+      $scope.swipe = $event => console.log($event);
+    })
 ```
 
 ## Known issues and workarounds
