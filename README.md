@@ -1,10 +1,12 @@
+Simple vertical/horizontal swipe gesture directives and a swipe service for AngularJS
+
 #angular-swipe
 
-Simple vertical/horizontal swipe gesture directives and a swipe service for angular js >= 1.4 that should be used as a replacement for ngTouch and its ngSwipeLeft and ngSwipeRight directives. The problem with ngTouch is that it replaces all default ngClick directives and can screw up how focus event works in input fields which are wrapped with ngClick directive. More on the problem with ngTouch here: https://github.com/angular/angular.js/issues/6432#issuecomment-54636616. 
+Should be used as a replacement for ngTouch and its ngSwipeLeft and ngSwipeRight directives. The problem with ngTouch is that it replaces all default ngClick directives and can screw up how focus event works in input fields which are wrapped with ngClick directive. More on the problem with ngTouch here: https://github.com/angular/angular.js/issues/6432#issuecomment-54636616. 
 
 ## Install
 
-+ This is intended to be used as npm module only now. This works really well with browserify.
++ This is intended to be used as npm module only and works really well with browserify.
 
 >
 ``` 
