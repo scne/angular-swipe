@@ -1,6 +1,10 @@
 {
   "name": "angular-swipe",
   "version": "0.3.0",
+  "contributors": {
+    "name": "neverwintermoon",
+    "email": "manni.calavera@gmail.com"
+  },
   "devDependencies": {
     "angular": "^1.4.8",
     "babel-cli": "^6.3.17",
@@ -21,7 +25,15 @@
   "engines": {
     "node": ">=0.8.0"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NeverwinterMoon/angular-swipe.git"
+  },
+  "bugs": {
+    "url": "https://github.com/NeverwinterMoon/angular-swipe/issues"
+  },
   "main": "dist/angular-swipe.js",
+  "license": "MIT",
   "scripts": {
     "compile": "babel src -d dist --presets es2015",
     "bundle": "./node_modules/.bin/browserify -t [ babelify --presets [ es2015 ] ] ./test/app.js -o ./test/bundle.js",
