@@ -1,9 +1,9 @@
 {
   "name": "angular-swipe",
-  "version": "0.4.0",
+  "version": "0.1.0",
   "contributors": {
-    "name": "neverwintermoon",
-    "email": "manni.calavera@gmail.com"
+    "name": "scne",
+    "email": "claudio.pomo@gmail.com"
   },
   "devDependencies": {
     "angular": "^1.4.8",
@@ -27,10 +27,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/NeverwinterMoon/angular-swipe.git"
+    "url": "git+https://github.com/scne/angular-swipe.git"
   },
   "bugs": {
-    "url": "https://github.com/NeverwinterMoon/angular-swipe/issues"
+    "url": "https://github.com/scne/angular-swipe/issues"
   },
   "main": "dist/angular-swipe.js",
   "license": "MIT",
