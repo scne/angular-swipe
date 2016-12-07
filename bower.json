@@ -5,10 +5,10 @@
   "authors": [
     "marmorkuchen.net <andreas@marmorkuchen.net>"
   ],
-  "homepage": "https://github.com/marmorkuchen-net/angular-swipe",
+  "homepage": "https://github.com/scne/angular-swipe",
   "repository": {
     "type": "git",
-    "url": "git@github.com:marmorkuchen-net/angular-swipe.git"
+    "url": "git@github.com:scne/angular-swipe.git"
   },
   "keywords": [
     "swipe",
